@@ -1,5 +1,6 @@
 import './App.scss';
 import BusinessList from './Components/BusinessList';
+import SearchBar from './Components/SearchBar';
 
 
 
@@ -8,7 +9,7 @@ function App() {
     <div className="c-app">
       <h1>Welcome to Ravenous!</h1>
       <p>Here you'll find the best restaurants recomendations depending on your area!</p>
-      
+      <SearchBar/>
       <BusinessList/> 
     </div>
   );
