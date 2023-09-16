@@ -1,9 +1,52 @@
 .c-business{
-    border: 1px solid black;
-    padding: 16px;
+  border: 1px solid black;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  font-size: 14px;
+  width: 100%;
+  max-width: 300px;
+
+  &__title{
+    font-size: 16px;
+  }
+  &__columns{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  &__first-col{
+    display: inline-block;
+    width:60%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem
+  }
+
+  &__row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  &__second-col{
+    display: inline-block;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__category{
+    text-transform: capitalize;
+    color: gray;
+  }
+
+  &__rating{
+    color:gray;
+    font-size:12px;
+  }
 }
