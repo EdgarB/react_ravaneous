@@ -1,17 +1,20 @@
 import React from 'react';
+import './Business.scss';
 
-function Business() {
+function Business(props) {
     return (
         <div className='c-business'>
-            <img src='' alt='Business image'/>
-            <p>Name</p>
-            <p>Address</p>
-            <p>City</p>
-            <p>State</p>
-            <p>Zip code</p>
-            <p>Category</p>
-            <p>Rating</p>
-            <p>Count</p>
+            <img src={props.image} alt='Business image'/>
+            <p>{props.name}</p>
+            <p>{props.address}</p>
+            <p>{props.city}</p>
+            <p>{props.state}</p>
+            <p>{props.zipCode}</p>
+            <p>{props.category}</p>
+            <p>{props.rating} stars</p>
+            <p>{props.reviewCount} reviews</p>
         </div>
     );
 }
+
+export default Business;
