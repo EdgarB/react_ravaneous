@@ -20,13 +20,20 @@
       font-size: 14px;
       font-weight: normal;
       text-align: center;
-      &--selected{
-        font-weight: bold;
-      }
+
       &:hover{
         opacity: 0.30;
         cursor: pointer;
       }
+      
+      &--selected{
+        font-weight: bold;
+        &:hover{
+          opacity: 1;
+          cursor: default;
+        }
+      }
+      
     }
   }
   &__inputs-container{
