@@ -35,9 +35,10 @@ function restaurantFactory(){
 function BusinessList(){
     return(
       <div className='c-business-list'>
-        {dummyRestaurants.map( r => {
+        {dummyRestaurants.map( (r, index) => {
           return (
             <Business 
+              key={r.name.toLowerCase() + index}
               name={r.name}
               address={r.address}
               image= {r.image}
