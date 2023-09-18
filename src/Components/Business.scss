@@ -1,52 +1,79 @@
+$max_width: 250px;
+
 .c-business{
-  border: 1px solid black;
-  padding: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
+  margin: 2rem;
   font-size: 14px;
   width: 100%;
-  max-width: 300px;
+  max-width: $max_width;
 
-  &__title{
-    font-size: 16px;
+  &__header{
+    position: relative;
+    height: $max_width;
+    width: $max_width;
+    overflow: hidden;
+    margin-bottom: 8px;
+    &-img{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
   }
-  &__columns{
+  &__body{
+    background-color: white;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-  &__first-col{
-    display: inline-block;
-    width:60%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  &__second-col{
-    display: inline-block;
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  &__category{
-    text-transform: capitalize;
-    color: gray;
-  }
-
-  &__rating{
-    color:gray;
-    font-size:12px;
+    z-index: 1;
+    font-size: 12px;
+    &-title{
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+      text-transform: capitalize;
+      padding-bottom: 4px;
+    }
+    
+    &-columns{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+    &-first-col{
+      display: inline-block;
+      width:60%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &-row{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  
+    &-second-col{
+      display: inline-block;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    &-category{
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #1F8CE0;
+    }
+  
+    &-rating{
+      color:#1F8CE0;
+      font-weight: bold;
+    }
   }
 }

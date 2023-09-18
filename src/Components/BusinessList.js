@@ -1,6 +1,7 @@
 import React from 'react';
 import Business from './Business';
 import './BusinessList.scss';
+import BusinessPlaceholderImg from '../food.jpg';
 
 function restaurantFactory(){
     return (
@@ -41,7 +42,7 @@ function BusinessList(){
               key={r.name.toLowerCase() + index}
               name={r.name}
               address={r.address}
-              image= {r.image}
+              image= {BusinessPlaceholderImg}
               city= {r.city}
               state= {r.state}
               zipCode= {r.zip_code}
