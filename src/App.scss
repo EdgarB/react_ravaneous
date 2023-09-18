@@ -19,7 +19,20 @@
         transform: translate(-50%, 0);
         top:0;
         z-index: -2;
-        
+        &-credit{
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          z-index: 0;
+          color: white;
+          opacity: 0.8;
+          font-size: 12px;
+          padding: 16px;
+          :link{
+            color: white;
+            font-weight: bold;
+          }
+        }
       }
       &-content{
         text-align: center;
