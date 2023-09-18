@@ -6,11 +6,16 @@
     
 
     &__header{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       overflow: hidden;
       width: 100%;
       z-index: 1;
       box-sizing: border-box;
+      min-height: 350px;
+      
       &-img{
         position: absolute;
         width: 100%;
@@ -35,6 +40,7 @@
         }
       }
       &-content{
+        width: 100%;
         text-align: center;
         padding: 1.5rem;
         color: white;
@@ -43,7 +49,7 @@
       &::before{
         content: '';
         position: absolute;
-        background-color: black;
+        background-color: #131112;
         top:0;
         left: 0;
         width: 100%;
