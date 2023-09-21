@@ -7,6 +7,8 @@ import clsx from 'clsx';
 
 function SearchBar(){
   const [sortingOption, setSortingOption] = useState('best_match');
+  const [location, setlocation] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const selectSortingOption = (event) => {
     const optionSelected = event.currentTarget.getAttribute('data-sorting-option');
@@ -21,8 +23,22 @@ function SearchBar(){
     }
   }
 
+  const handleSearchTermChange = (event) => {
+    setSearchTerm(event.currentTarget.value);
+  }
+
+  const handleLocationChange = (event) => {
+    setlocation(event.currentTarget.value);
+  }
+
+  const handleFormSubmit = (event)=>{
+    event.preventDefault();
+    console.log(`Searching ${searchTerm}, ${location}, ${sortingOption}`);
+    setSearchTerm('');
+    setlocation('');
+  }
   return(
-    <form className='c-search-bar'>
+    <form className='c-search-bar' onSubmit={handleFormSubmit}>
       <input type='hidden' name='sorting' value={sortingOption}/>
       <div className='c-search-bar__sorting-options'>
         <div 
@@ -48,8 +64,8 @@ function SearchBar(){
         </div>
       </div>
       <div className='c-search-bar__inputs-container'>
-        <input className='c-search-bar__input' type='text' placeholder='Search Businesses'/>
-        <input className='c-search-bar__input' type='text' placeholder='Where?'/>
+        <input className='c-search-bar__input' type='text' placeholder='Search Businesses' value={searchTerm} onChange={handleSearchTermChange}/>
+        <input className='c-search-bar__input' type='text' placeholder='Where?' value={location} onChange={handleLocationChange}/>
       </div>
       <button className='c-search-bar__btn' type='submit'>Let's Go</button>
     </form>
