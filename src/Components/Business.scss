@@ -1,4 +1,4 @@
-$max_width: 280px;
+$max_width: 250px;
 
 .c-business{
   display: flex;
@@ -9,19 +9,30 @@ $max_width: 280px;
   font-size: 14px;
   width: 100%;
   max-width: $max_width;
+  -webkit-box-shadow: 0px 25px 57px -6px rgba(12,20,54,0.3);
+  -moz-box-shadow: 0px 25px 57px -6px rgba(12,20,54,0.3);
+  box-shadow: 0px 25px 57px -6px rgba(12,20,54,0.3);
+  border-radius: 4px;
+  overflow: hidden;
 
   &__header{
     height: $max_width;
     width: $max_width;
     overflow: hidden;
-    margin-bottom: 8px;
     background-color: black;
   }
   &__body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    
     background-color: white;
     width: 100%;
     z-index: 1;
     font-size: 12px;
+    padding: 1rem;
+    min-height: 125px;
     &-title{
       font-size: 18px;
       font-weight: bold;

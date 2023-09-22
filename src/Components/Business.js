@@ -7,7 +7,7 @@ function Business(props) {
     return (
         <div className='c-business'>
           <div className='c-business__header'>
-            <SquaredImg src={image} size="280px"/>
+            <SquaredImg src={image} size="250px"/>
           </div>
           <div className='c-business__body'>
             <p className='c-business__body-title'>{name}</p>
