@@ -5,7 +5,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1rem;
 
   &__sorting-options{
     display: flex;
@@ -17,7 +16,7 @@
     width: 100%;
     min-height: 49px;
 
-    border-bottom: 0.5px solid white;
+    
     margin-bottom: 16px;
 
     &__item{
@@ -26,21 +25,24 @@
       flex-wrap: nowrap;
       justify-content: center;
       align-items: center;
-      font-size: 16px;
-      font-weight: normal;
+      font-size: 12px;
+      font-weight: bold;
       text-align: center;
-      max-width: 100px;
       width: 100%;
       transition: all 0.3s ease;
+      border-bottom: 0.5px solid white;
+      flex:1;
       &:hover{
         transition: all 0.3s ease;
-        opacity: 0.30;
+        opacity: 0.5;
         cursor: pointer;
       }
 
       &--selected{
         font-weight: bold;
         transition: all 0.3s ease;
+        border-color: #279AF1;
+        color: #279AF1;
         &:hover{
           opacity: 1;
           cursor: default;
@@ -77,9 +79,9 @@
 
   &__btn{
     border-radius: 4px;
-    padding: 8px 16px;
+    padding: 16px 16px;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     width: 100%;
     max-width: 112px;

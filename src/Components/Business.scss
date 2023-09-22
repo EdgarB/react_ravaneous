@@ -1,4 +1,4 @@
-$max_width: 250px;
+$max_width: 280px;
 
 .c-business{
   display: flex;
@@ -11,19 +11,11 @@ $max_width: 250px;
   max-width: $max_width;
 
   &__header{
-    position: relative;
     height: $max_width;
     width: $max_width;
     overflow: hidden;
     margin-bottom: 8px;
-    &-img{
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
+    background-color: black;
   }
   &__body{
     background-color: white;
@@ -43,13 +35,9 @@ $max_width: 250px;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
+      justify-content: space-between;
     }
-    &-first-col{
-      display: inline-block;
-      width:60%;
-      display: flex;
-      flex-direction: column;
-    }
+   
   
     &-row{
       display: flex;
@@ -57,13 +45,6 @@ $max_width: 250px;
       flex-wrap: nowrap;
     }
   
-    &-second-col{
-      display: inline-block;
-      width: 40%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
   
     &-category{
       text-transform: uppercase;
@@ -74,6 +55,10 @@ $max_width: 250px;
     &-rating{
       color:#1F8CE0;
       font-weight: bold;
+    }
+
+    &-right-side{
+      text-align: right;
     }
   }
 }

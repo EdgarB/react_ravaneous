@@ -5,15 +5,10 @@ import clsx from 'clsx';
 
 
 
-function SearchBar(){
+function SearchBar(props){
   const [sortingOption, setSortingOption] = useState('best_match');
   const [location, setlocation] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-
-  const selectSortingOption = (event) => {
-    const optionSelected = event.currentTarget.getAttribute('data-sorting-option');
-    setSortingOption(optionSelected);
-  }
 
   const optionSelectedClass = (optionName) => {
     if(sortingOption === optionName){
@@ -31,11 +26,10 @@ function SearchBar(){
     setlocation(event.currentTarget.value);
   }
 
-  const handleFormSubmit = (event)=>{
+  const handleFormSubmit = async (event)=>{
     event.preventDefault();
-    console.log(`Searching ${searchTerm}, ${location}, ${sortingOption}`);
-    setSearchTerm('');
-    setlocation('');
+    const searchResults = await props.search(searchTerm, location, sortingOption);
+    props.setSearchResults(searchResults);
   }
   return(
     <form className='c-search-bar' onSubmit={handleFormSubmit}>
@@ -43,21 +37,21 @@ function SearchBar(){
       <div className='c-search-bar__sorting-options'>
         <div 
         className={clsx('c-search-bar__sorting-options__item', optionSelectedClass('best_match'))} 
-        onClick={selectSortingOption} data-sorting-option='best_match'>
+        onClick={()=>{setSortingOption('best_match')}} >
           Best
           <br/>
           Match
         </div>
         <div 
-        className={clsx('c-search-bar__sorting-options__item', optionSelectedClass('highest_rating'))} 
-        onClick={selectSortingOption} data-sorting-option='highest_rating'>
+        className={clsx('c-search-bar__sorting-options__item', optionSelectedClass('rating'))} 
+        onClick={()=>{setSortingOption('rating')}} >
           Highest
           <br/>
           Rated
         </div>
         <div 
-        className={clsx('c-search-bar__sorting-options__item', optionSelectedClass('most_reviewed'))} 
-        onClick={selectSortingOption} data-sorting-option='most_reviewed'>
+        className={clsx('c-search-bar__sorting-options__item', optionSelectedClass('review_count'))} 
+        onClick={()=>setSortingOption('review_count')} >
           Most
           <br/>
           Reviewed
