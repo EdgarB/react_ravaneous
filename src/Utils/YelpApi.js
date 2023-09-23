@@ -2,8 +2,8 @@
 
 async function yelpSearch(searchTerms, location, sortBy='best_match'){
   const yelpApiKey = process.env.REACT_APP_YELP_API_SECRET;
-const withCorsAnywhere = true;
-const yelpBaseUrl = `${withCorsAnywhere ? 'https://cors-anywhere.herokuapp.com/' : '' }https://api.yelp.com/v3`;
+  const withCorsAnywhere = process.env.REACT_APP_USE_CORS_ANYWHERE == 'TRUE';
+  const yelpBaseUrl = `${withCorsAnywhere ? 'https://cors-anywhere.herokuapp.com/' : '' }https://api.yelp.com/v3`;
 
   if(!(sortBy==='best_match' || sortBy === 'rating' || sortBy === 'review_count')){
     console.log('Wrong parameters set for sortBy yelp search.' )
