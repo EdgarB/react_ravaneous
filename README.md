@@ -9,7 +9,7 @@
   <p align="center">
     A ReactJS app for searching businesses around an area using the YELP API!
     <br/>
-    <a href="https://capable-bombolone-ca6bad.netlify.app/">Live version of the app here</a>
+    -----> <a href="https://capable-bombolone-ca6bad.netlify.app/">Live version of the app here</a> <-----
   </p>
 </div>
 &nbsp;  
