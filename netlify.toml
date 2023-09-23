@@ -1,9 +1,7 @@
 [build]
   functions = "functions/"
-  publish = "src"
-[development]
-  functions = "functions/"
-  publish = "src"
+  publish = "build"
+
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
   for = "/*"
