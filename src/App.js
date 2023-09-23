@@ -4,7 +4,7 @@ import BusinessList from './Components/BusinessList';
 import SearchBar from './Components/SearchBar';
 import headerImg from './header.jpg';
 import NavBar from './Components/NavBar';
-import yelpSearch from './Utils/YelpApi';
+import yelpSearchWithNetlifyFunc from './Utils/YelpApi';
 
 
 
@@ -38,7 +38,7 @@ function App() {
         Foto de <a href="https://unsplash.com/es/@toddquackenbush?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Todd Quackenbush</a> en <a href="https://unsplash.com/es/fotos/x5SRhkFajrA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </div>
         <div className='c-app__header-content'>
-          <SearchBar search={yelpSearch} setSearchResults={setSearchResults}/>
+          <SearchBar search={yelpSearchWithNetlifyFunc} setSearchResults={setSearchResults}/>
         </div>
       </div>
       <div className='c-app__body'>

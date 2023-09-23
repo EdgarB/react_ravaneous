@@ -1,6 +1,6 @@
 
 
-async function yelpSearch(searchTerms, location, sortBy='best_match'){
+async function yelpSearchWithNetlifyFunc(searchTerms, location, sortBy='best_match'){
   const baseUrl = "/.netlify/functions/fetch-yelp-search";
   const requestParams = `?term="${searchTerms}"&location=${location}&sort_by=${sortBy}`;
   const url = `${baseUrl}${requestParams}`
@@ -18,4 +18,4 @@ async function yelpSearch(searchTerms, location, sortBy='best_match'){
   }
 }
 
-export default yelpSearch;
+export default yelpSearchWithNetlifyFunc;
